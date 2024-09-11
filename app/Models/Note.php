@@ -13,5 +13,8 @@ class Note extends Model
     protected $fillabe = ['title', 'body', 'user_id'];
 
     public function user(): BelongsTo
+    {
+        
+    }
     
 }
