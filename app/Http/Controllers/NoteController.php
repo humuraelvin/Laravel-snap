@@ -54,7 +54,8 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
-        //
+        // dd(vars: $note);
+        return view('notes.show', compact('note'));
     }
 
     /**
