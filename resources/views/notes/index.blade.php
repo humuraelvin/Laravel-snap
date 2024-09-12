@@ -6,8 +6,22 @@
     </x-slot>
 
 
-
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 p-4">
+
+        <div class="flex justify-between items-center">
+            <div class="float-left">
+                <h2 class="text-4xl font-extrabold text-gray-900 dark:text-gray-100">
+                    {{ __('Notes') }}
+                </h2>
+            </div>
+            <div>
+                <a href="{{route('notes.create')}}" d
+                    class="float-right inline-flex items-center px-4 py-2 bg-green-500 dark:bg-green-500/100 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 focus:bg-green-700 dark:focus:bg-green-700 active:bg-green-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ">
+                    Create
+                </a>
+            </div>
+        </div>
+
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-6 space-y-6">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
@@ -19,7 +33,6 @@
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Body
-                        <!-- #region -->
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Created At
