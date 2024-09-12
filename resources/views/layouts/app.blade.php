@@ -8,7 +8,7 @@
 
     <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
 
-    <title>#isset($title){{$title}}-@endisset LaravelNotes</title>
+    <title>@isset($title){{$title}}-@endisset LaravelNotes</title>
 
 
     <!-- Fonts -->
