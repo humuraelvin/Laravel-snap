@@ -29,7 +29,8 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view(view: 'notes.create');
+        $title = "Create Note";
+        return view(view: 'notes.create', data: compact('title'));
     }
 
     /**
