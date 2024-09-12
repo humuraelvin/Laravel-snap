@@ -81,7 +81,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')">
-                {{ __('Notes') }}
+                {{ __('Notes ') }}
             </x-responsive-nav-link>
         </div>
 
