@@ -13,7 +13,9 @@ class NoteController extends Controller
      */
     public function index()
     {
-         return view('notes.index');
+        //Retrieve all notes from the database
+        $notes = Note::all();
+         return view('notes.index', compact('notes'));
     }
 
     /**
