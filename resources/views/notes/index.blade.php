@@ -18,6 +18,11 @@
                 <a href="{{route('notes.create')}}" d
                     class="float-right inline-flex items-center px-4 py-2 bg-green-500 dark:bg-green-500/100 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 focus:bg-green-700 dark:focus:bg-green-700 active:bg-green-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ">
                     Create
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+
                 </a>
             </div>
         </div>
