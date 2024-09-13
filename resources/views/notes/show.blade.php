@@ -29,7 +29,7 @@
                 <form method="POST" action="{{ route('notes.destroy', $note) }}">
                     @csrf
                     @method('delete')
-                     <x-red-btn-link class="mr-2" :href="route('notes.destroy', $note)">Delete</x-red-btn-link>
+                     <x-danger-button onclick="return confirm('Are you sure, you want to delete this Note?')">Delete</x-danger-button>
 
                 </form>
             </div>
