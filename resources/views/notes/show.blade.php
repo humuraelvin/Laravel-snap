@@ -7,7 +7,7 @@
 
 
     <div class="max-w-2xl mx-auto sm:px-6 lg:px-8 p-4">
-        <x-amber-btn-link :href="route('notes.index')">
+        <x-amber-btn-link :href="route('notes.index')" class="mb-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
@@ -20,13 +20,13 @@
                 <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
                     {{ $note->title }}
                 </h2>
-                <p class="text-gray-600 bg-gray-100 dark:bg-gray-700">
-                    {{$note->body}}
+                <p class="text-gray-600 dark:text-gray-700 mt-2">
+                    {{ $note->body }}
                 </p>
             </div>
-            <div class="flex justify-end p-4 bg-gray-400 dark:bg-gray-700">
+            <div class="flex justify-end p-4 bg-gray-100 dark:bg-gray-700">
                 <x-cyan-btn-link class='mr-2'>Edit</x-cyan-btn-link>
-                <x-cyan-btn-link class="mr-2">Delete</x-cyan-btn-link>
+                <x-red-btn-link class="mr-2">Delete</x-red-btn-link>
             </div>
         </div>
 

@@ -64,7 +64,8 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        //
+        $title = 'Edit Note';
+        return view('notes.edit', compact(['note', 'title'])) ;
     }
 
     /**
