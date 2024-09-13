@@ -45,7 +45,7 @@ class NoteController extends Controller
         ]);
         
         $request->user()->notes()->create($validated);
-        return redirect(route('notes.index'))->with('success', 'Post created successfully');
+        return redirect(route('notes.index'))->with('success', 'Note created successfully');
 
 
     }
@@ -80,7 +80,7 @@ class NoteController extends Controller
          ]);
 
          $note->update($validated); 
-         return redirect(route('notes.index'))->with('success', 'Post updated successfully');
+         return redirect(route('notes.index'))->with('success', 'Note updated successfully');
     }
 
     /**
@@ -88,6 +88,8 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        //
+        $note->delete();
+        return redirect(route('notes.index'))->with('success', 'Note deleted successfully');
+
     }
 }
