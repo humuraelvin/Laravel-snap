@@ -5,9 +5,7 @@
         </h2>
     </x-slot>
 
-
     <div class="max-w-2xl mx-auto sm:px-6 lg:px-8 p-4">
-
         <div class="flex justify-between items-center">
             <div class="float-left">
                 <h2 class="text-4xl font-extrabold text-gray-900 dark:text-gray-100">
@@ -15,21 +13,19 @@
                 </h2>
             </div>
             <div class="float-right">
-                <a href="{{route('notes.index')}}"
+                <a href="{{ route('notes.index') }}"
                     class="inline-flex items-center px-4 py-2 bg-amber-500 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-green-700 dark:hover:bg-amber-300 focus:bg-green-700 dark:focus:bg-white active:bg-green-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                     </svg>
-
-                    {{__('Back')}}
-
+                    {{ __('Back') }}
                 </a>
             </div>
         </div>
 
-        <orm method="post" action="{{ route('notes.store') }}" class="mt-6 space-y-6">
+        <form method="post" action="{{ route('notes.store') }}" class="mt-6 space-y-6">
             @csrf
 
             <div>
@@ -45,12 +41,9 @@
                 <x-input-error class="mt-2" :messages="$errors->get('body')" />
             </div>
 
-
             <div class="flex items-center gap-4">
                 <x-primary-button>{{ __('Create') }}</x-primary-button>
             </div>
-
-        </orm>
+        </form>
     </div>
-
 </x-app-layout>
